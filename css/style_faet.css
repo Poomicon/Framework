@@ -1,0 +1,322 @@
+p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Open Sans", sans-serif;
+}
+body{
+    height: 100vh;
+    background-color: #000;
+    background: #ffffff;
+    background-size: cover;
+    background-position: center;
+    padding:0;
+    margin:0;
+    justify-self:center;
+    align-items: center;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 1rem;
+}
+a:hover{
+    color: #0329ff;
+}
+header{
+    position: relative;
+    padding: 0 1rem;
+    background-color: #ffffff;
+    
+}
+.navber{
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navber .logo{
+    font-size: 1rem;
+    font-weight: bold;
+}
+.logo img{
+    height: 3rem;
+    width: 5rem;
+}
+.navber .link{
+    display: flex;
+    gap:2rem;
+}
+.navber .toggle_btn{
+    color: #000000;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+.action_btn{
+    background-color: #0329ff;
+    color: #ffffff;
+    padding:0.5rem 1rem;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;  
+}
+.action_btn:hover{
+    scale: 1.05;
+    color: #ffffff;
+}
+.action_btn:active{
+    scale: 0.95;
+}
+/* DROPDOWN MENU */
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height:0 ;
+    width: 300px;
+    background: #a19c9c;
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition:hegiht 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 10;
+}
+.dropdown_menu.open{
+    height:270px;
+}
+.dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dropdown_menu .action_btn{
+    width: 100%;
+    display:flex;
+    justify-content: center;
+}
+
+/* RESPONSIVE DESION */
+@media(max-width:992px){
+    .navber .link,
+    .navber .action_btn{
+        display: none;
+    }    
+    
+    .navber .toggle_btn{
+        display: block;
+    }
+    
+    .dropdown_menu{
+        display: block;
+    }
+}
+@media(max-width:576px){
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
+}
+
+.images img{
+    height: 10rem;
+    width:100%;
+    object-fit:cover;
+    justify-content: center;
+    padding-bottom:0;
+    overflow: hidden;
+}
+.people h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    color: #0329ff;
+    padding-top:0.5rem;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+}
+
+.container {
+    margin-top: 100px;
+}
+
+.container .row .col-lg-4 {
+    display: flex;
+    justify-content: center;
+    margin-right:2rem;
+    margin-bottom: 20px;
+}
+
+.card {
+    position: relative;
+    padding: 0;
+    margin: 0 !important;
+    border-radius: 20px;
+    overflow: hidden;
+    max-width: 280px;
+    max-height: 250px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+}
+
+.card .card-image {
+    width: 100%;
+    max-height: 250px;
+}
+
+.card .card-image img {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    
+}
+
+.card .card-content {
+    position: absolute;
+    bottom: -180px;
+    color: #1eff00;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    min-height: 140px;
+    width: 100%;
+    transition: bottom .4s ease-in;
+    box-shadow: 0 -10px 10px rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card:hover .card-content {
+    bottom: 0px;
+}
+
+.card:hover .card-content h4,
+.card:hover .card-content h5 {
+    transform: translateY(10px);
+    opacity: 1;
+}
+
+.card .card-content h4,
+.card .card-content h5 {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
+    transition: 0.8s;
+    font-weight: 500;
+    opacity: 0;
+    transform: translateY(-40px);
+    transition-delay: 0.2s;
+}
+
+.card .card-content h5 {
+    transition: 0.5s;
+    font-weight: 200;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+
+.card .card-content .social-icons {
+    list-style: none;
+    padding: 0;
+}
+
+
+.card .card-content .social-icons li {
+    margin: 10px;
+    transition: 0.5s;
+    transition-delay: calc(0.15s * var(--i));
+    transform: translateY(50px);
+}
+
+
+.card:hover .card-content .social-icons li {
+    transform: translateY(20px);
+}
+
+.card .card-content .social-icons li a {
+    color: #fff;
+}
+
+.card .card-content .social-icons li a span {
+    font-size: 1.3rem;
+}
+
+@media(max-width:991.5px) {
+    .container {
+        margin-top: 20px;
+    }
+
+    .container .row .col-lg-4 {
+        margin: 20px 0px;
+    }
+}
+
+.button_g{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-toolbar {
+    display: flex;
+    justify-content:center;
+    width: 100%;
+    max-width:800px; /* ปรับขนาดสูงสุดของ toolbar */
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+/* สไตล์สำหรับกลุ่มปุ่ม */
+.btn-group {
+display: flex;
+flex-wrap: wrap; /* ให้ปุ่มสามารถจับกลุ่มและไหลลงมาได้ */
+}
+
+/* สไตล์สำหรับปุ่ม */
+.btn {
+padding: 8px 16px;
+margin: 4px;
+border: 1px solid #ccc;
+border-radius: 4px;
+background-color: #fff;
+color: #333;
+font-size: 14px;
+cursor: pointer;
+transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn:hover {
+background-color: #e0e0e0;
+border-color: #aaa;
+}
+
+/* สไตล์สำหรับปุ่มที่มีการเลือก */
+.btn-outline-secondary {
+border-color: #6c757d;
+color: #6c757d;
+}
+
+.btn-outline-secondary:hover {
+background-color: #6c757d;
+color: #fff;
+}

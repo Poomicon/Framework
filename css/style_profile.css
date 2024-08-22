@@ -1,0 +1,198 @@
+p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Open Sans", sans-serif;
+}
+body{
+    height: 100vh;
+    background-color: #000;
+    background: #ffffff;
+    background-size: cover;
+    background-position: center;
+    padding:0;
+    margin:0;
+    justify-self:center;
+    align-items: center;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 1rem;
+}
+a:hover{
+    color: #0329ff;
+}
+header{
+    position: relative;
+    padding: 0 1rem;
+    background-color: #ffffff;
+    
+}
+.navber{
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navber .logo{
+    font-size: 1rem;
+    font-weight: bold;
+}
+.logo img{
+    height: 3rem;
+    width: 5rem;
+}
+.navber .link{
+    display: flex;
+    gap:2rem;
+}
+.navber .toggle_btn{
+    color: #000000;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+.action_btn{
+    background-color: #0329ff;
+    color: #ffffff;
+    padding:0.5rem 1rem;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;  
+}
+.action_btn:hover{
+    scale: 1.05;
+    color: #ffffff;
+}
+.action_btn:active{
+    scale: 0.95;
+}
+/* DROPDOWN MENU */
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height:0 ;
+    width: 300px;
+    background: #a19c9c;
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition:hegiht 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 10;
+}
+.dropdown_menu.open{
+    height:270px;
+}
+.dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dropdown_menu .action_btn{
+    width: 100%;
+    display:flex;
+    justify-content: center;
+}
+
+/* RESPONSIVE DESION */
+@media(max-width:992px){
+    .navber .link,
+    .navber .action_btn{
+        display: none;
+    }    
+    
+    .navber .toggle_btn{
+        display: block;
+    }
+    
+    .dropdown_menu{
+        display: block;
+    }
+}
+@media(max-width:576px){
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
+}
+
+.row h2{
+    text-align: center;
+    color: #0329ff;
+}
+
+    
+.container {
+  display: flex;
+  justify-content: center; /* จัดกึ่งกลางในแนวนอน */
+  align-items: center;     /* จัดกึ่งกลางในแนวตั้ง */
+  height:100vh;           /* ทำให้คอนเทนเนอร์มีความสูงเต็มหน้าจอ */
+  padding: 20px;            /* เพิ่มพื้นที่เล็กน้อยรอบคอนเทนเนอร์ */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Image styling */
+.container img {
+width:30rem;
+height:30rem;
+object-fit: cover;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.col-md-4 {
+    display: flex;
+    justify-content: center; /* จัดกึ่งกลางในแนวนอน */
+    align-items: start;     /* จัดกึ่งกลางในแนวตั้ง */
+    height: 100%;   
+}
+
+/* Card body styling */
+.card-body {
+padding: 16px;
+}
+
+.card-body h5{
+    text-align: center; 
+}
+/* Card title styling */
+.card-title {
+font-size: 1.75rem;
+margin-bottom: 0.75rem;
+}
+
+/* Card text styling */
+.card-text {
+font-size: 1rem;
+color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+.card {
+    max-width: 100%;
+    margin: 0;
+}
+
+.col-md-8 {
+    flex: 1 1 100%;
+}
+}

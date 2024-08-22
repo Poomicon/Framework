@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style_profile.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+   integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" 
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <header>
+    <div class="navber">
+      <div class="logo">
+        <a href="#"><img src="image/logo.aa2240c2.png" alt=""></a>
+      </div>
+      <ul class="link">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Senior.html">ศิษย์วิทย์คอม</a></li>
+        <li><a href="#">ข่าวสาร</a></li>
+        <li><a href="#">ติดต่อเรา</a></li>
+        <li><a href="#">หลักสูตร</a></li>
+      </ul>
+      <a href="" class="action_btn">เข้าสู่ระบบ</a>
+      <div class="toggle_btn">
+        <i class=" fa-solid fa-bars"></i>
+      </div>
+    </div>
+
+    <div class="dropdown_menu">
+      <li><a href="#index.html">Home</a></li>
+      <li><a href="Senior.html">ศิษย์วิทย์คอม</a></li>
+      <li><a href="#">ข่าวสาร</a></li>
+      <li><a href="#">ติดต่อเรา</a></li>
+      <li><a href="#">หลักสูตร</a></li>
+      <li><a href="" class="action_btn"> เข้าสู่ระบบ</a></li>
+    </div>
+  </header>
+  
+  <script>
+    const toggleBtn = document.querySelector('.toggle_btn')
+    const toggleBtnIcon = document.querySelector('.toggle_btn i')
+    const dropDown_Menu = document.querySelector('.dropdown_menu')
+
+    toggleBtn.onclick = function(){
+      dropDown_Menu.classList.toggle('open')
+      const isOpen = dropDown_Menu.classList.contains('open')
+
+      toggleBtnIcon.classList = isOpen
+      ? 'fa-solid fa-xmark'
+      : 'fa-solid fa-bars'
+    }
+  </script>
+
+  <div class="container">
+    <div class="row g-0">
+      <h2> รุ่นที่ 29</h2>
+      <div class="col-md-4">
+        <img src="image/me.jpg"  alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title"> POOM</h5>
+          <p class="card-text"><b>ชื่อ</b> ณัฐภููมิ  หลู่จิ่ง</p>
+          <p class="card-text"><b>รหัสนักศึกษา</b> 66XXXXXX</p>
+          <p class="card-text"><b>ตำเเหน่ง</b> XXXXX</p>
+          <p class="card-text"><b>ติดต่อ</b> Whpxxxxxx</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

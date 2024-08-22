@@ -1,0 +1,170 @@
+p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Open Sans", sans-serif;
+}
+body{
+    height: 100vh;
+    background-color: #0062ff;
+    background: #ffffff;
+    background-size: cover;
+    background-position: center;
+    padding:0;
+    margin:0;
+    justify-self:center;
+    align-items: center;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 1rem;
+}
+a:hover{
+    color: #0329ff;
+}
+header{
+    position: relative;
+    padding: 0 1rem;
+    background-color: #ffffff;
+    
+}
+.navber{
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navber .logo{
+    font-size: 1rem;
+    font-weight: bold;
+}
+.logo img{
+    height: 3rem;
+}
+.navber .link{
+    display: flex;
+    gap:2rem;
+}
+.navber .toggle_btn{
+    color: #000000;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+.action_btn{
+    background-color: #0329ff;
+    color: #ffffff;
+    padding:0.5rem 1rem;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;  
+}
+.action_btn:hover{
+    scale: 1.05;
+    color: #ffffff;
+}
+.action_btn:active{
+    scale: 0.95;
+}
+/* DROPDOWN MENU */
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height:0 ;
+    width: 300px;
+    background: #00e5ff;
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition:hegiht 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dropdown_menu.open{
+    height:270px;
+}
+.dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dropdown_menu .action_btn{
+    width: 100%;
+    display:flex;
+    justify-content: center;
+}
+
+/* RESPONSIVE DESION */
+@media(max-width:992px){
+    .navber .link,
+    .navber .action_btn{
+        display: none;
+    }    
+    
+    .navber .toggle_btn{
+        display: block;
+    }
+    
+    .dropdown_menu{
+        display: block;
+    }
+}
+@media(max-width:576px){
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs -gutter-y)* -1);
+    margin-right: calc(var(--bs -gutter-x)* -.5);
+    margin-left: calc(var(--bs -gutter-x)* -.5);
+    justify-content: center;
+    padding-top:1rem;
+    background-color: #ffffff;
+}
+.col{
+    margin-bottom: 1.5rem;
+    padding: 0 1.5rem;
+}
+
+h2{
+    display: flex;               /* ใช้ Flexbox */
+    justify-content: center;     /* จัดกลางแนวนอน */
+    align-items: center;         /* จัดกลางแนวตั้ง */
+    height: 1rem;               /* ทำให้ <div> มีความสูงเต็มหน้าจอ (Optional) */
+    text-align: center;          /* จัดข้อความให้กึ่งกลาง */
+    color: #0329ff;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    height: 100%; 
+    background-color: #ffffff; 
+    border-top: 1px solid #1286fa; 
+}
+a img{
+    height: 10rem;
+}
+.mess p{
+    font-size: 1 rem;
+}

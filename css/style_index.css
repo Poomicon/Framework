@@ -1,0 +1,198 @@
+p {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family:"Open Sans", sans-serif;
+}
+body{
+    height: 100vh;
+    background-color: #000;
+    background-image: url("https://www.krungsricard.com/KrungsriCreditCard/media/html/13-Nachi-Falls.jpg");
+    background-size: cover;
+    background-position: center;
+    padding:0;
+    margin:0;
+    justify-self:center;
+    align-items: center;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 1rem;
+}
+a:hover{
+    color: #0329ff;
+}
+header{
+    position: relative;
+    padding: 0 1rem;
+    background-color: #ffffff;
+    
+}
+.navber{
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navber .logo{
+    font-size: 1rem;
+    font-weight: bold;
+}
+.logo img{
+    height: 3rem;
+}
+.navber .link{
+    display: flex;
+    gap:2rem;
+}
+.navber .toggle_btn{
+    color: #000000;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+.action_btn{
+    background-color: #0329ff;
+    color: #000000;
+    padding:0.5rem 1rem;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;  
+}
+.action_btn:hover{
+    scale: 1.05;
+    color: #ffffff;
+}
+.action_btn:active{
+    scale: 0.95;
+}
+/* DROPDOWN MENU */
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height:0 ;
+    width: 300px;
+    background: #a19c9c;
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition:hegiht 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 10;
+}
+.dropdown_menu.open{
+    height:270px;
+}
+.dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dropdown_menu .action_btn{
+    width: 100%;
+    display:flex;
+    justify-content: center;
+}
+
+/* RESPONSIVE DESION */
+@media(max-width:992px){
+    .navber .link,
+    .navber .action_btn{
+        display: none;
+    }    
+    
+    .navber .toggle_btn{
+        display: block;
+    }
+    
+    .dropdown_menu{
+        display: block;
+    }
+}
+@media(max-width:576px){
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.slideshow{
+    position: relative;
+    max-width: 1000px;
+    max-height: 500px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+.items{
+    max-width: 1000px; 
+    max-height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.items img{
+    width: 1000px;
+    height: 500px;
+    object-fit:cover;
+}
+.slideshow .slick-prev{
+    position: absolute;
+    top: 250px;
+    left: 20px;
+    z-index: 10;
+}
+.slideshow .slick-next{
+    position: absolute;
+    top: 250px;
+    right: 20px;
+    z-index: 10;
+}
+.slideshow .slick-arrow{
+    z-index: 10px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: none;
+}
+.slideshow .slick-dots{
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.slideshow .slick-dots li{
+    list-style: none;
+    margin:0 2px;
+    width: 10px;
+    height: 10px;
+    background: #ffffff;
+    border-radius: 50%;
+}
+.slideshow .slick-active{
+    background: #a19c9c !important;
+}
